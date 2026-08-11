@@ -75,7 +75,7 @@ The `resources` array contains a set of available Quantum Resources which can be
 | properties | descriptions |
 | ---- | ---- |
 | name | Quantum resource name. e.g. Quantum backend name. |
-| type | Resource type (`ibm-quantum-system`, `qiskit-runtime-service` and `pasqal-cloud`) |
+| type | Resource type (`ibm-quantum-system`, `qiskit-runtime-service`, `pasqal-cloud` and `maestro-local`) |
 | environment | A set of environment variables to work with QRMI. Current implementations assume API endpoint and credentials are specified via environment variable setting. |
 
 If a user specifies a resource with the --qpu option that is not defined in the qrmi_config.json file, the specification will be ignored.

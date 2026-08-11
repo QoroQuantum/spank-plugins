@@ -239,4 +239,12 @@ cat slurm-81.out # Assuming job_id is 81
 
 It is possible to run JSON-serialized jobs directly using a commandline utility called qrmi_task_runner. See the [task_runner examples](https://github.com/qiskit-community/qrmi/python/qrmi/tools/README.md) for details.
 
+For example, to run a GHZ-state circuit against the local Maestro simulator on the **login node**:
+
+```bash
+sbatch /shared/spank-plugins/demo/qrmi/jobs/run_task_maestro_local.sh
+```
+
+This submits `task_runner_ghz_maestro_local.json` (a pre-built `task_runner` payload for the `maestro-local` resource) to the `local_maestro` QPU resource defined in `qrmi_config.json`.
+
 ## END OF DOCUMENT

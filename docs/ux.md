@@ -14,6 +14,7 @@ HPC user experience, HPC developer experience and usage patterns
     - [IQM Server API](#iqm-server-api)
     - [Pasqal](#pasqal)
     - [Alice and Bob Felis API](#alice-and-bob-felis-api)
+    - [Maestro](#maestro)
 - [Examples](#examples)
   - [Running jobs with dependencies](#running-jobs-with-dependencies)
   - [Running a job with several Slurm QPU resources](#running-a-job-with-several-slurm-qpu-resources)
@@ -214,6 +215,13 @@ Specifically, this includes:
  
 ##### HPC user scope
 HPC users are expected to generate their own API key rather than using a shared token.
+
+#### Maestro
+##### HPC admin scope
+Maestro Local runs as an in-process simulator, so there are no endpoints or credentials to configure. The resource is declared in `qrmi_config.json` with an empty `environment` object (e.g. `{"name": "local_maestro", "type": "maestro-local", "environment": {}}`).
+
+##### HPC user scope
+Jobs are submitted as QASM circuits together with simulator options (simulator type, simulation method, number of qubits) rather than referencing a remote backend. See [run_maestro_example.sh](../demo/qrmi/jobs/run_maestro_example.sh) and [run_task_maestro_local.sh](../demo/qrmi/jobs/run_task_maestro_local.sh) for example job scripts.
 
 ## Examples
 

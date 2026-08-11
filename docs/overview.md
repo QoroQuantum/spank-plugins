@@ -83,6 +83,11 @@ Pasqal's native programming library [GitHub](https://github.com/pasqal-io/pulser
 ### Alice & Bob Felis
 Cloud-based quantum computing service providing access to Alice & Bob quantum computers and emulator backends via the Felis API.
 
+## Vendor-Specific Definitions: Maestro
+
+### Maestro Local
+In-process quantum circuit simulator, run locally on the compute node rather than accessed through a remote endpoint. Used for testing and development without requiring credentials or network access to a QPU provider.
+
 ## High Level Structure
 
 At large, there are three domains:
